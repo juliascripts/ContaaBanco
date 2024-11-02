@@ -1,0 +1,39 @@
+
+package com.mycompany.contaabanco;
+import java.util.Scanner;
+
+public class Contaabanco {
+        public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Variáveis para armazenar os dados da conta
+        int numero;
+        String agencia;
+        String nomeCliente;
+        double saldo;
+
+        // Solicitar e ler os dados do usuário
+        System.out.print("Por favor, digite o número da Conta: ");
+        numero = sc.nextInt(); // Lê o número da conta
+
+        System.out.print("Por favor, digite o número da Agência: ");
+        agencia = sc.next(); // Lê o número da agência
+
+        // Limpa o buffer após ler o número da conta e a agência
+        sc.nextLine(); // Necessário para limpar o buffer
+
+        System.out.print("Por favor, digite o Nome do Cliente: ");
+        nomeCliente = sc.nextLine(); // Lê o nome do cliente
+
+        System.out.print("Por favor, digite o Saldo: ");
+        saldo = sc.nextDouble(); // Lê o saldo
+
+        // Exibir a mensagem de confirmação
+        String mensagem = "Olá " + nomeCliente + ", obrigado por criar uma conta em nosso banco, " +
+                "sua agência é " + agencia + ", sua conta é " + numero +
+                " e seu saldo de R$" + saldo + " já está disponível para saque.";
+        System.out.println(mensagem);
+
+        // Fechar o scanner
+        sc.close(); // Boa prática para liberar recursos
+    }
+}
